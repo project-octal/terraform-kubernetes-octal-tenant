@@ -1,8 +1,8 @@
-<p align="center">
-  <img width="460" height="300" src="https://project-octal-static-assets.nyc3.digitaloceanspaces.com/project-octal-extras.svg" unselectable="on">
-</p>
-
+![Project Octal: ArgoCD](docs/images/project-octal-argocd.svg "Project Octal ArgoCD")
 ---
-### terraform-kubernetes-octal-tenant
 
 Project Octal Tenant is a module designed to simplify Kubernetes multitenancy configuration and management.
+
+### TODO:
+- Update the Terraform version to 1.0+
+- Finish the module
