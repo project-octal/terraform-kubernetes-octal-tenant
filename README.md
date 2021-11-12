@@ -1,4 +1,4 @@
-![Project Octal: ArgoCD](docs/images/project-octal-argocd.svg "Project Octal ArgoCD")
+![Project Octal: Tenant](docs/images/project-octal-tenant.svg "Project Octal Tenant")
 ---
 
 Project Octal Tenant is a module designed to simplify Kubernetes multitenancy configuration and management.
