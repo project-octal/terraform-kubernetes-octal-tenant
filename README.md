@@ -1,6 +1,9 @@
 ![Project Octal: Tenant](docs/images/project-octal-tenant.svg "Project Octal Tenant")
 ---
 
+[![Terraform Lint](https://github.com/project-octal/terraform-kubernetes-octal-tenant/actions/workflows/terraform-checks.yml/badge.svg?branch=main)](https://github.com/project-octal/terraform-kubernetes-octal-tenant/actions/workflows/terraform-checks.yml)
+[![Tenant CI](https://github.com/project-octal/terraform-kubernetes-octal-tenant/actions/workflows/octal-tenant-test.yml/badge.svg?branch=main)](https://github.com/project-octal/terraform-kubernetes-octal-tenant/actions/workflows/octal-tenant-test.yml)
+
 Project Octal Tenant is a module designed to simplify Kubernetes multitenancy configuration and management.
 
 ### TODO:
