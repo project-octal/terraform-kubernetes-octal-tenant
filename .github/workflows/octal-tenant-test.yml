@@ -1,0 +1,31 @@
+name: Tenant-CI
+on:
+  - pull_request
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    name: build example and deploy to minikube
+    steps:
+    - uses: actions/checkout@v2
+
+    # Setup the Go environment
+    - uses: actions/setup-go@v1
+      with:
+        go-version: 1.17
+    - name: Download Go Modules
+      working-directory: test
+      run: go mod download
+    
+    # Setup the Terraform environment
+    - uses: autero1/action-terraform@v0.1.0
+      with:
+        terraform_version: 1.0.5
+
+    # Start the minikube cluster
+    - name: Start minikube
+      uses: medyagh/setup-minikube@master
+    
+    # Execute the tests
+    - name: Run Go Tests
+      working-directory: test
+      run: go test -v -tags=unit -timeout 30m
