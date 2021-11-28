@@ -17,7 +17,8 @@ jobs:
       run: go mod download
     
     # Setup the Terraform environment
-    - uses: autero1/action-terraform@v0.1.0
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
       with:
         terraform_version: 1.0.5
 

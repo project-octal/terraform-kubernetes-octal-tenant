@@ -1,11 +1,11 @@
 module "test_tenant" {
-  source = "../../"
+  source      = "../../"
   tenant_name = var.tenant_name
 }
 
 resource "kubernetes_pod" "test" {
   metadata {
-    name = "terraform-example"
+    name      = "terraform-example"
     namespace = module.test_tenant.namespace
   }
   spec {
@@ -21,11 +21,11 @@ resource "kubernetes_pod" "test" {
       }
       resources {
         requests = {
-          cpu = "100m"
+          cpu    = "100m"
           memory = "128Mi"
         }
         limits = {
-          cpu = "200m"
+          cpu    = "200m"
           memory = "256Mi"
         }
       }

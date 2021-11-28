@@ -2,9 +2,9 @@ resource "kubernetes_role" "tenant_role" {
   for_each = var.tenant_permissions
 
   metadata {
-    name = "tenant-${var.tenant_name}-${each.key}"
+    name      = "tenant-${var.tenant_name}-${each.key}"
     namespace = kubernetes_namespace.tenant_namespace.metadata.0.name
-    labels = local.labels
+    labels    = local.labels
   }
 
   dynamic "rule" {
@@ -22,7 +22,7 @@ resource "kubernetes_role_binding" "tenant_role_binding" {
   for_each = var.tenant_permissions
 
   metadata {
-    name = "tenant-${var.tenant_name}-${each.key}"
+    name      = "tenant-${var.tenant_name}-${each.key}"
     namespace = kubernetes_namespace.tenant_namespace.metadata[0].name
   }
 
@@ -31,7 +31,7 @@ resource "kubernetes_role_binding" "tenant_role_binding" {
     kind      = "Role"
     name      = kubernetes_role.tenant_role[each.key].metadata[0].name
   }
-  
+
   dynamic "subject" {
     for_each = each.value.oidc_groups
 

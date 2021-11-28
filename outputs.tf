@@ -1,5 +1,5 @@
 output "name" {
-	value = var.tenant_name
+  value = var.tenant_name
 }
 
 output "namespace" {
