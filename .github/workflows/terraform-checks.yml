@@ -2,7 +2,7 @@
 # with an API token for Terraform Cloud (app.terraform.io). On pull request events, this workflow will run
 # `terraform init`, `terraform fmt -recursive -check`, and a `terraform validate`.
 
-name: 'Terraform'
+name: Terraform Lint
 
 on:
   push:
